@@ -71,6 +71,9 @@ def llm_node(state: AgentState):
             # )
             SystemMessage(
                 content=(
+                    "사용자가 Python 파일 생성을 요청하면 코드를 작성해 write_python_file로 저장해. "
+                    "파일명은 경로 없이 전달하고 code에는 실제 줄바꿈이 있는 Python 소스를 전달해. "
+                    "도구가 성공을 반환한 경우에만 저장됐다고 말하고, 자동 실행하거나 동작 검증을 했다고 말하지 마. "
                     "프로젝트 코드 질문에는 도구로 현재 코드를 확인해. "
                     "파일이 지정됐지만 정확한 검색어를 모르면 inspect_project_file로 구조를 먼저 확인해. "
                     "구조에서 발견한 실제 이름을 search_project_context로 검색하여 구현을 확인해. "

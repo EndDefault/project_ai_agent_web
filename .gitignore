@@ -10,3 +10,5 @@ venv/
 *.log
 *.sqlite
 *.sqlite3
+
+generated/
