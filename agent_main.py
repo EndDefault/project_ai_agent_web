@@ -71,6 +71,13 @@ def llm_node(state: AgentState):
             # )
             SystemMessage(
                 content=(
+                    "generated 안의 기존 Python 파일 수정은 edit_generated_python을 호출해. "
+                    "file_path와 사용자의 구체적인 수정 요청 instruction을 전달하면 내부에서 파일 탐색과 구조 확인 후 수정해. "
+                    "함수 이름만 알면 function_name으로 전달하고 file_path는 생략해. difference를 difference.py로 추측하지 마. "
+                    "파일과 함수 이름을 둘 다 모르면 instruction만 전달하여 함수 목록을 확인한 뒤 실제 이름으로 호출해. "
+                    "여러 후보 중 수정 대상이 불분명하면 사용자에게 물어봐. "
+                    "이 수정 작업은 별도의 검색이나 읽기 도구를 먼저 호출할 필요가 없어. "
+                    "수정 완료 결과를 받은 경우에만 같은 파일에 저장됐다고 안내해. 실패하면 오류를 설명해. "
                     "사용자가 Python 파일 생성을 요청하면 코드를 작성해 write_python_file로 저장해. "
                     "파일명은 경로 없이 전달하고 code에는 실제 줄바꿈이 있는 Python 소스를 전달해. "
                     "도구가 성공을 반환한 경우에만 저장됐다고 말하고, 자동 실행하거나 동작 검증을 했다고 말하지 마. "
