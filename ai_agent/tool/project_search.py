@@ -6,7 +6,7 @@ import ast
 import os
 from pathlib import Path
 
-from tool.timing import measure_time
+from ai_agent.tool.timing import measure_time
 
 EXCLUDED_DIRS = {".git", ".venv", "venv", "__pycache__", "node_modules", ".next"}
 

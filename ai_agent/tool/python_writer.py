@@ -4,7 +4,7 @@ import re
 from pathlib import Path
 
 from langchain.tools import tool
-from tool.timing import measure_time
+from ai_agent.tool.timing import measure_time
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
