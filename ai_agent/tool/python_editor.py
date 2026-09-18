@@ -11,8 +11,8 @@ from langchain.tools import tool
 from langchain.messages import SystemMessage, HumanMessage
 from langchain_ollama import ChatOllama
 
-from tool.project_search import collect_python_files, outline_python_code, node_start
-from tool.timing import measure_time
+from ai_agent.tool.project_search import collect_python_files, outline_python_code, node_start
+from ai_agent.tool.timing import measure_time
 
 GENERATED_DIR = Path(__file__).resolve().parents[1] / "generated"
 
